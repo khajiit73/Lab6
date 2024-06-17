@@ -1,9 +1,12 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'skhemii.labs.lab6'
 version = '1.0-SNAPSHOT'
+
+mainClassName = 'skhemii.labs.lab6.Main'
 
 repositories {
     mavenCentral()
