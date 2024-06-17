@@ -1,11 +1,12 @@
 package skhemii.labs.lab6;
 
 import skhemii.labs.lab6.bank.*;
+import skhemii.labs.lab6.chronometer.TimeDisplay;
 
 public class Main {
     public static void main(String[] args) {
-
-        BankTest();
+        //BankTest();
+        ChronometerTest();
     }
 
     private static void BankTest() {
@@ -21,5 +22,14 @@ public class Main {
             Thread thread = new Thread(transfer);
             thread.start();
         }
+    }
+    private static void ChronometerTest() {
+        TimeDisplay display = new TimeDisplay();
+        display.addChronometer(1);
+        display.addChronometer(5);
+        display.addChronometer(10);
+        display.addChronometer(15);
+        display.addChronometer(20);
+        display.run();
     }
 }
